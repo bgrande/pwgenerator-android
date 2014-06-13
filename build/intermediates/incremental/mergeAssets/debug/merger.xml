@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="19.1.0" >
+        <source path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets" >
+            <file
+                name="js/crypto-js.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/crypto-js.js" />
+            <file
+                name="js/options-android.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/options-android.js" />
+            <file
+                name="js/vault.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/vault.js" />
+            <file
+                name="js/options.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/options.js" />
+            <file
+                name="js/core.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/core.js" />
+            <file
+                name="js/vault-min.js.map"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/vault-min.js.map" />
+            <file
+                name="js/vault-min.js"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/js/vault-min.js" />
+            <file
+                name="index.html"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/index.html" />
+            <file
+                name="options.html"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/options.html" />
+            <file
+                name="css/options.css"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/css/options.css" />
+            <file
+                name="css/vault.css"
+                path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/main/assets/css/vault.css" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/benedikt/AndroidStudioProjects/pwgenerator-android/app/src/debug/assets" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <title>Easy Password Handling</title>
+    <link rel="stylesheet" href="./css/vault.css">
+  </head>
+  <body>
+
+    <div class="form">
+      <div class="sub">
+        <label for="service">Service name <span>e.g. &ldquo;twitter&rdquo;</span></label>
+        <input type="text" class="text" name="service" id="service" autocomplete="off" autocapitalize="off">
+
+        <div class="password">
+          <label for="passphrase">Passphrase <span>e.g. &ldquo;I&rsquo;m the best 17-year old ever.&rdquo;</span></label>
+          <input type="password" class="password" name="passphrase" id="passphrase" autocomplete="off" autocapitalize="off">
+          <span class="show">
+            <label for="show-passphrase">Show</label>
+            <input type="checkbox" name="show-passphrase" id="show-passphrase">
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="generator">
+      <div class="sub">
+        <label for="word">Generated password</label>
+        <input type="text" class="text" id="word" autocomplete="off" autocapitalize="off">
+      </div>
+    </div>
+
+    <script src="./js/crypto-js.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/vault.js"></script>
+
+  </body>
+</html>
+
