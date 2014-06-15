@@ -3,7 +3,6 @@ package bgrande.pwgenerator_android;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.webkit.WebView;
 
 public class Settings extends Activity
