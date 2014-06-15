@@ -1,27 +1,38 @@
-(function () {
-    var settings = DEFAULT_SETTINGS; // @todo must be loaded from android db
+'use strict';
 
-    var generatorFactory = function (settings, domainname) {
-        var domainService = Object.create(DomainService).init(DEFAULT_SETTINGS.serviceExceptions, domainname),
-            generator = Object.create(Generator).init(settings, domainService);
-    };
+var generatorFactory = function (settings, domainname) {
+    var domainService = Object.create(DomainService).init(DEFAULT_SETTINGS.serviceExceptions, domainname);
 
-    var generatePw = function () {
-        var generator = generatorFactory(settings, $('domain').value);
-        $('word').value = generator.generatePassword($('passphrase').value, $('service').value);;
-    };
+    return Object.create(Generator).init(settings, domainService);
+};
 
-    on([$('passphrase'), $('service')], 'change', function () {
-        generatePw();
-    });
+var generatePw = function (settings) {
+    var generator = generatorFactory(settings, $('domain').value);
+    $('word').value = generator.generatePassword($('passphrase').value, $('service').value);
+};
 
-    on($('show-passphrase'), 'change', function () {
-        var checked = this.checked;
-        var type = $('passphrase').type;
-        if (type === 'password' && checked) {
-            $('passphrase').type = 'text';
-        } else {
-            $('passphrase').type = 'password';
-        }
-    });
-})();
+var settings = DEFAULT_SETTINGS; // @todo must be loaded from android db
+
+try {
+on($('passphrase'), 'keyup', function () {
+    generatePw(settings);
+});
+
+on($('service'), 'keyup', function () {
+    generatePw(settings);
+});
+
+on($('show-passphrase'), 'change', function () {
+    var checked = this.checked,
+        type = $('passphrase').type;
+
+    if (type === 'password' && checked) {
+        $('passphrase').type = 'text';
+    } else {
+        $('passphrase').type = 'password';
+    }
+});
+
+} catch (error) {
+    alert(error);
+}
