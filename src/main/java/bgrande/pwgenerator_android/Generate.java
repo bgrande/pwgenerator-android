@@ -1,6 +1,7 @@
 package bgrande.pwgenerator_android;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +10,9 @@ import android.view.MenuItem;
 import android.annotation.SuppressLint;
 import android.webkit.WebView;
 
-public class Generate extends ActionBarActivity {
+public class Generate extends ActionBarActivity
+{
+    protected static final String PREFS_NAME = "GeneratorOptions";
 
     @Override
     @SuppressLint("SetJavaScriptEnabled")
@@ -39,6 +42,13 @@ public class Generate extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public String loadOptions() {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        String settings = preferences.getString("settings", "{}");
+
+        return settings;
     }
 
     public void goBack() {

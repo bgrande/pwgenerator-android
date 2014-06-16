@@ -16,6 +16,6 @@ var androidCancel = function () {
 
 };
 
-var androidSave = function () {
-    Android.saveOptions();
+var androidSave = function (settings) {
+    Android.saveOptions(JSON.stringify(settings));
 };

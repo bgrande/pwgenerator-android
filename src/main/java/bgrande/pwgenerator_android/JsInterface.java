@@ -1,30 +1,42 @@
 package bgrande.pwgenerator_android;
 
 import android.app.Activity;
-import android.content.Context;
-
-import java.lang.reflect.Array;
+import android.webkit.JavascriptInterface;
 
 public class JsInterface
 {
 
-    protected Context con;
     protected Activity activity;
 
-
     public JsInterface(Activity activity) {
-        this.con = activity;
         this.activity = activity;
     }
 
+    @JavascriptInterface
     public void cancelOptions() {
         this._goBackToGenerator();
-
     }
 
-    public void saveOptions(Array options) {
-        // @todo save options and
+    /**
+     * @param options String stringified json object
+     */
+    @JavascriptInterface
+    public void saveOptions(String options) {
+        Settings activity = this._getActivity();
+
+        activity.saveOptions(options);
         this._goBackToGenerator();
+    }
+
+    @JavascriptInterface
+    public void loadOptions() {
+        Settings activity = this._getActivity();
+
+        activity.loadOptions();
+    }
+
+    protected Settings _getActivity() {
+        return (Settings) this.activity;
     }
 
     protected void _goBackToGenerator() {
