@@ -13,7 +13,6 @@ var generatePw = function (settings) {
 
 var settings = DEFAULT_SETTINGS; // @todo must be loaded from android db
 
-try {
 on($('passphrase'), 'keyup', function () {
     generatePw(settings);
 });
@@ -33,6 +32,6 @@ on($('show-passphrase'), 'change', function () {
     }
 });
 
-} catch (error) {
-    alert(error);
-}
+on($('word'), ['focus', 'click'], function (e) {
+    this.select();
+});
