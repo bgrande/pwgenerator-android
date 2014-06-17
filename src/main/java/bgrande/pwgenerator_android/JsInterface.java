@@ -1,14 +1,15 @@
 package bgrande.pwgenerator_android;
 
 import android.app.Activity;
+import android.util.JsonReader;
 import android.webkit.JavascriptInterface;
 
 public class JsInterface
 {
 
-    protected Activity activity;
+    protected AbstractAppActivity activity;
 
-    public JsInterface(Activity activity) {
+    public JsInterface(AbstractAppActivity activity) {
         this.activity = activity;
     }
 
@@ -22,21 +23,13 @@ public class JsInterface
      */
     @JavascriptInterface
     public void saveOptions(String options) {
-        Settings activity = this._getActivity();
-
         activity.saveOptions(options);
         this._goBackToGenerator();
     }
 
     @JavascriptInterface
-    public void loadOptions() {
-        Settings activity = this._getActivity();
-
-        activity.loadOptions();
-    }
-
-    protected Settings _getActivity() {
-        return (Settings) this.activity;
+    public String loadOptions() {
+        return activity.loadOptions();
     }
 
     protected void _goBackToGenerator() {

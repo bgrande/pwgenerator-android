@@ -1,6 +1,5 @@
 package bgrande.pwgenerator_android;
 
-import android.app.Activity;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -11,7 +10,7 @@ public class WebViewFactory
     protected WebView webView;
     protected JsInterface jsInterface;
 
-    public WebViewFactory(Activity activity) {
+    public WebViewFactory(AbstractAppActivity activity) {
         this.webView = new WebView(activity);
 
         this.webView.setClickable(true);
