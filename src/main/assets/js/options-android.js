@@ -1,5 +1,11 @@
 'use strict';
 
+(function () {
+    var settings = Android.loadOptions();
+    getOptionSettings(JSON.parse(settings));
+})();
+
+
 var saveSettings = function (settings) {
     androidSave(settings);
 };
@@ -13,7 +19,6 @@ on($('cancel-options'), 'click', function() {
 
 var androidCancel = function () {
     Android.cancelOptions();
-
 };
 
 var androidSave = function (settings) {
