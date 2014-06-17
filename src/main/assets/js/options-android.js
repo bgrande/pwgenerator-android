@@ -1,17 +1,16 @@
 'use strict';
 
 (function () {
-    var settings = Android.loadOptions();
-    getOptionSettings(JSON.parse(settings));
+    var settings = Android.loadOptions(),
+        mergedSettings = Helper.mergeObject(JSON.parse(settings), DEFAULT_SETTINGS);
+
+    getOptionSettings(mergedSettings);
 })();
 
 
 var saveSettings = function (settings) {
     androidSave(settings);
 };
-
-// let the application set the saved settings
-// getOptionSettings(JSON.parse(items.settings));
 
 on($('cancel-options'), 'click', function() {
     androidCancel();
