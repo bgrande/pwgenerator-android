@@ -44,7 +44,7 @@ abstract public class AbstractAppActivity extends ActionBarActivity
         ClipData clip = ClipData.newPlainText("pw", word);
         clipboard.setPrimaryClip(clip);
 
-        String toastTest = "copied " + word + " to clipboard!";
+        String toastTest = "copied password to clipboard!";
 
         Toast toast = Toast.makeText(this, toastTest, Toast.LENGTH_LONG);
         toast.show();
