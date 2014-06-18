@@ -1,7 +1,5 @@
 package bgrande.pwgenerator_android;
 
-import android.app.Activity;
-import android.util.JsonReader;
 import android.webkit.JavascriptInterface;
 
 public class JsInterface
@@ -15,7 +13,7 @@ public class JsInterface
 
     @JavascriptInterface
     public void cancelOptions() {
-        this._goBackToGenerator();
+        this._close();
     }
 
     /**
@@ -24,7 +22,7 @@ public class JsInterface
     @JavascriptInterface
     public void saveOptions(String options) {
         activity.saveOptions(options);
-        this._goBackToGenerator();
+        this._close();
     }
 
     @JavascriptInterface
@@ -32,11 +30,8 @@ public class JsInterface
         return activity.loadOptions();
     }
 
-    protected void _goBackToGenerator() {
-        if (this.activity instanceof Settings) {
-            Settings settings = (Settings) this.activity;
-            settings.goBack();
-        }
+    protected void _close() {
+        this.activity.finish();
     }
 
 }

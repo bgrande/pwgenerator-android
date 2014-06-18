@@ -1,5 +1,7 @@
 'use strict';
 
+var settings = Helper.mergeObject(DEFAULT_SETTINGS, JSON.parse(Android.loadOptions()));
+
 var generatorFactory = function (settings, domainname) {
     var domainService = Object.create(DomainService).init(DEFAULT_SETTINGS.serviceExceptions, domainname);
 
@@ -10,8 +12,6 @@ var generatePw = function (settings) {
     var generator = generatorFactory(settings, $('domain').value);
     $('word').value = generator.generatePassword($('passphrase').value, $('service').value);
 };
-
-var settings = DEFAULT_SETTINGS; // @todo must be loaded from android db
 
 on($('passphrase'), 'keyup', function () {
     generatePw(settings);

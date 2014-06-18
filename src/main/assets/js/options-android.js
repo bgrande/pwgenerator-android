@@ -2,7 +2,7 @@
 
 (function () {
     var settings = Android.loadOptions(),
-        mergedSettings = Helper.mergeObject(JSON.parse(settings), DEFAULT_SETTINGS);
+        mergedSettings = Helper.mergeObject(DEFAULT_SETTINGS, JSON.parse(settings));
 
     getOptionSettings(mergedSettings);
 })();

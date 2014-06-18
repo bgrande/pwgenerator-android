@@ -19,10 +19,10 @@ public class Settings extends AbstractAppActivity
     public void saveOptions(String options) {
         CharSequence result;
         boolean success;
-        int duration = Toast.LENGTH_LONG;
 
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("options", options);
         success = editor.commit();
 
         if (success) {
@@ -31,16 +31,8 @@ public class Settings extends AbstractAppActivity
             result = "Settings could not be saved!";
         }
 
-        Toast toast = Toast.makeText(this, result, duration);
+        Toast toast = Toast.makeText(this, result, Toast.LENGTH_LONG);
         toast.show();
-    }
-
-    public void goBack() {
-        if (this.webView.canGoBack()) {
-            this.webView.goBack();
-        } else {
-            finish();
-        }
     }
 
 }
