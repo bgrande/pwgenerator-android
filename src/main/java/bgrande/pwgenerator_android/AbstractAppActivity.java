@@ -1,8 +1,11 @@
 package bgrande.pwgenerator_android;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 abstract public class AbstractAppActivity extends ActionBarActivity
 {
@@ -35,4 +38,15 @@ abstract public class AbstractAppActivity extends ActionBarActivity
         return options;
     }
 
+    public void copyToClipboard(String word) {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+
+        ClipData clip = ClipData.newPlainText("pw", word);
+        clipboard.setPrimaryClip(clip);
+
+        String toastTest = "copied " + word + " to clipboard!";
+
+        Toast toast = Toast.makeText(this, toastTest, Toast.LENGTH_LONG);
+        toast.show();
+    }
 }

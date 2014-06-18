@@ -30,6 +30,11 @@ public class JsInterface
         return activity.loadOptions();
     }
 
+    @JavascriptInterface
+    public void copyToClipboard(String word) {
+        this.activity.copyToClipboard(word);
+    }
+
     protected void _close() {
         this.activity.finish();
     }

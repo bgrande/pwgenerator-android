@@ -37,8 +37,4 @@ public class Generate extends AbstractAppActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public void goBack() {
-
-    }
-
 }

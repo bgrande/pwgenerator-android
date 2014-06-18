@@ -39,4 +39,5 @@ on($('show-passphrase'), 'change', function () {
 
 on($('word'), ['focus', 'click'], function (e) {
     this.select();
+    Android.copyToClipboard(this.value);
 });
