@@ -13,6 +13,11 @@ var generatePw = function (settings) {
     $('word').value = generator.generatePassword($('passphrase').value, $('service').value);
 };
 
+on($('domain'), 'change', function () {
+    var generator = generatorFactory(settings, $('domain').value);
+   $('service').value = generator.getServicename($('service').value, undefined);
+});
+
 on($('passphrase'), 'keyup', function () {
     generatePw(settings);
 });

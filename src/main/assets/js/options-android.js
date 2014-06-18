@@ -5,6 +5,8 @@
         mergedSettings = Helper.mergeObject(DEFAULT_SETTINGS, JSON.parse(settings));
 
     getOptionSettings(mergedSettings);
+
+    $('servicename').disabled = 'disabled';
 })();
 
 
