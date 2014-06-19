@@ -24,6 +24,11 @@ abstract public class AbstractAppActivity extends ActionBarActivity
     public void onResume()
     {  // After a pause OR at startup
         super.onResume();
+
+        // clear clipboard!
+        _setClip("");
+        _printToast("cleaned up clipboard!");
+
         this.webView.reload();
     }
 
@@ -39,14 +44,23 @@ abstract public class AbstractAppActivity extends ActionBarActivity
     }
 
     public void copyToClipboard(String word) {
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        _setClip(word);
+        _printToast("copied password to clipboard!");
+    }
+
+    protected ClipboardManager _getClipboard() {
+        return (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+    }
+
+    protected void _setClip(String word) {
+        ClipboardManager clipboard = _getClipboard();
 
         ClipData clip = ClipData.newPlainText("pw", word);
         clipboard.setPrimaryClip(clip);
+    }
 
-        String toastTest = "copied password to clipboard!";
-
-        Toast toast = Toast.makeText(this, toastTest, Toast.LENGTH_LONG);
+    protected void _printToast(String text) {
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
         toast.show();
     }
 }

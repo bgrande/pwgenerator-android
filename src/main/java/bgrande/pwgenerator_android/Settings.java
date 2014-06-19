@@ -3,7 +3,6 @@ package bgrande.pwgenerator_android;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class Settings extends AbstractAppActivity
 {
@@ -17,7 +16,7 @@ public class Settings extends AbstractAppActivity
     }
 
     public void saveOptions(String options) {
-        CharSequence result;
+        String resultMessage;
         boolean success;
 
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
@@ -26,13 +25,12 @@ public class Settings extends AbstractAppActivity
         success = editor.commit();
 
         if (success) {
-            result = "Settings successfully saved!";
+            resultMessage = "Settings successfully saved!";
         } else {
-            result = "Settings could not be saved!";
+            resultMessage = "Settings could not be saved!";
         }
 
-        Toast toast = Toast.makeText(this, result, Toast.LENGTH_LONG);
-        toast.show();
+        _printToast(resultMessage);
     }
 
 }
