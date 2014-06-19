@@ -7,6 +7,7 @@
     getOptionSettings(mergedSettings);
 
     $('servicename').disabled = 'disabled';
+    $('autosend').disabled = 'disabled';
 })();
 
 
