@@ -11,17 +11,9 @@
 
 
 var saveSettings = function (settings) {
-    androidSave(settings);
-};
-
-on($('cancel-options'), 'click', function() {
-    androidCancel();
-});
-
-var androidCancel = function () {
-    Android.cancelOptions();
-};
-
-var androidSave = function (settings) {
     Android.saveOptions(JSON.stringify(settings));
+};
+
+var cancelOptions = function () {
+    Android.cancelOptions();
 };

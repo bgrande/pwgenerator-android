@@ -160,6 +160,17 @@ table th:first-child, table td:first-child {
 }
 
 #save-options, #cancel-options {
-    padding: .5em;
-    margin-top: .3em;
+    padding: .8em;
+    width: 30%;
+    font-weight: bold;
+    margin: .6em 0;
+    float: left;
+}
+
+#cancel-options {
+    float: right;
+}
+
+#link-to-vault {
+    clear: both;
 }
