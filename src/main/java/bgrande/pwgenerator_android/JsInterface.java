@@ -13,7 +13,7 @@ public class JsInterface
 
     @JavascriptInterface
     public void cancelOptions() {
-        this._close();
+        _close();
     }
 
     /**
@@ -22,7 +22,7 @@ public class JsInterface
     @JavascriptInterface
     public void saveOptions(String options) {
         activity.saveOptions(options);
-        this._close();
+        _close();
     }
 
     @JavascriptInterface
@@ -32,11 +32,12 @@ public class JsInterface
 
     @JavascriptInterface
     public void copyToClipboard(String word) {
-        this.activity.copyToClipboard(word);
+        Generate activity = (Generate) this.activity;
+        activity.copyToClipboard(word);
     }
 
     protected void _close() {
-        this.activity.finish();
+        activity.finish();
     }
 
 }
