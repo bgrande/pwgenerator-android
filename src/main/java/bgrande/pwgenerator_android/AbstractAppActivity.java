@@ -26,9 +26,7 @@ abstract public class AbstractAppActivity extends ActionBarActivity
 
     public String loadOptions() {
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
-        String options = preferences.getString("options", "{}");
-
-        return options;
+        return preferences.getString("options", "{}");
     }
 
     protected void _printToast(String text) {
