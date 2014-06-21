@@ -71,7 +71,7 @@ input.text, input.password {
   font-family: Monaco, Courier New, monospace;
 }
 
-#reset-options {
+#reset-form {
     padding: 1em;
     width: 30%;
     font-weight: bold;

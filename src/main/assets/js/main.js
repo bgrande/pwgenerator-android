@@ -41,3 +41,8 @@ on($('word'), ['focus', 'click'], function (e) {
     this.select();
     Android.copyToClipboard(this.value);
 });
+
+on($('reset-form'), 'click', function (e) {
+    $('generator-form').reset();
+    Android.resetForm();
+});

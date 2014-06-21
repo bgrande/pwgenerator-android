@@ -27,8 +27,7 @@ public class Generate extends AbstractAppActivity
 
         // clear clipboard on Resume only after settings had been started before!
         if (hasBeenStarted) {
-            _setClip("");
-            _printToast("cleaned up clipboard!");
+            _resetClip();
             webView.reload();
         }
     }
@@ -51,6 +50,15 @@ public class Generate extends AbstractAppActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void resetForm() {
+        _resetClip();
+    }
+
+    protected void _resetClip() {
+        _setClip("");
+        _printToast("cleaned up clipboard!");
     }
 
     public void copyToClipboard(String word) {

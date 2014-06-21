@@ -36,6 +36,12 @@ public class JsInterface
         activity.copyToClipboard(word);
     }
 
+    @JavascriptInterface
+    public void resetForm() {
+        Generate activity = (Generate) this.activity;
+        activity.resetForm();
+    }
+
     protected void _close() {
         activity.finish();
     }
