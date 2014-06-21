@@ -9,6 +9,8 @@ abstract public class AbstractAppActivity extends ActionBarActivity
 {
     protected static final String PREFS_NAME = "GeneratorOptions";
 
+    protected static boolean hasBeenStarted = false;
+
     protected WebView webView;
 
     protected void _setWebView(String resource) {

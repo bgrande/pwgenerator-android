@@ -25,10 +25,12 @@ public class Generate extends AbstractAppActivity
     {  // After a pause OR at startup
         super.onResume();
 
-        // clear clipboard!
-        _setClip("");
-        _printToast("cleaned up clipboard!");
-        webView.reload();
+        // clear clipboard on Resume only after settings had been started before!
+        if (hasBeenStarted) {
+            _setClip("");
+            _printToast("cleaned up clipboard!");
+            webView.reload();
+        }
     }
 
     @Override
@@ -43,6 +45,7 @@ public class Generate extends AbstractAppActivity
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            hasBeenStarted = true;
             startActivity(new Intent(this, Settings.class));
             return true;
         }
