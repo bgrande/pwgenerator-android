@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dip"
+    android:baselineAligned="false"
+    android:clickable="false">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/app_name"
+        android:paddingBottom="0dp"
+        android:textColor="?android:attr/textColorPrimaryInverse" />
+
+    <TextView
+        android:id="@+id/about_credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dip"
+        android:textSize="15sp"
+        android:text="@string/credits"
+        android:autoLink="web"
+        android:isScrollContainer="true"
+        android:textColor="?android:attr/textColorPrimary" />
+
+</LinearLayout>

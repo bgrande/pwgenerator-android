@@ -1,5 +1,6 @@
 package bgrande.pwgenerator_android;
 
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
@@ -8,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import android.annotation.SuppressLint;
+import android.view.View;
+import android.widget.TextView;
 
 public class Generate extends AbstractAppActivity
 {
@@ -43,10 +46,13 @@ public class Generate extends AbstractAppActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            hasBeenStarted = true;
-            startActivity(new Intent(this, Settings.class));
-            return true;
+        switch (id) {
+            case R.id.action_settings:
+                hasBeenStarted = true;
+                startActivity(new Intent(this, Settings.class));
+                return true;
+            case R.id.about:
+                this._showAbout();
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,6 +81,21 @@ public class Generate extends AbstractAppActivity
 
         ClipData clip = ClipData.newPlainText("pw", word);
         clipboard.setPrimaryClip(clip);
+    }
+
+    protected void _showAbout() {
+        View messageView = getLayoutInflater().inflate(R.layout.about, null, false);
+
+        TextView textView = (TextView) messageView.findViewById(R.id.about_credits);
+        int defaultColor = textView.getTextColors().getDefaultColor();
+        textView.setTextColor(defaultColor);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.drawable.ic_launcher);
+        builder.setTitle(R.string.app_name);
+        builder.setView(messageView);
+        builder.create();
+        builder.show();
     }
 
 }

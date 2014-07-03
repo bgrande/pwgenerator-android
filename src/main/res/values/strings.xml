@@ -3,5 +3,8 @@
 
     <string name="app_name">Easy Password Generator</string>
     <string name="action_settings">Settings</string>
+    <string name="about">About</string>
+    <string name="credits">Version: 0.7.0\nAuthor: Benedikt Grande\nGithub: https://github.com/bgrande/pwgenerator-android\n\nThis is an Open Source app. Usage on your own behalf! It is provided with no warranties.\n\nThe app is compatible with as well as based on https://getvau.lt. Except on some pages where the allowed symbols are restricted and being injected by configuration.\n\nThe app provides you with a password generator which generates a password out of a salt (servicename) and your passphrase.\nBy combining these values you can always recover your password for a specific service or account without using the same password over and over again.\n\nYou can leave the domain field empty. If you are using domain based servicenames with a specific pattern it might be useful to use the domain field. You might also want to try the chrome extension https://chrome.google.com/webstore/detail/easy-password-handling/fobokeococnhobjlfpkoibpjnajichnj.
+    </string>
 
 </resources>
