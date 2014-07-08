@@ -4,7 +4,6 @@ var settings = Helper.mergeObject(DEFAULT_SETTINGS, JSON.parse(Android.loadOptio
 
 var generatorFactory = function (settings, domainname) {
     var domainService = Object.create(DomainService).init(DEFAULT_SETTINGS.serviceExceptions, domainname);
-
     return Object.create(Generator).init(settings, domainService);
 };
 
@@ -14,8 +13,8 @@ var generatePw = function (settings) {
 };
 
 on($('domain'), 'change', function () {
-    var generator = generatorFactory(settings, $('domain').value);
-   $('service').value = generator.getServicename($('service').value, undefined);
+    var generator = generatorFactory(settings, this.value);
+    $('service').value = generator.getServicename($('service').value, undefined);
 });
 
 on($('passphrase'), 'keyup', function () {
