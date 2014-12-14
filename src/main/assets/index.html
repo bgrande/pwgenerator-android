@@ -8,37 +8,39 @@
   </head>
   <body>
 
-    <form  id="generator-form">
-        <div class="form">
-          <div class="sub">
-            <label for="domain">Domain name <span>e.g. &ldquo;twitter.com&rdquo;</span></label>
-            <input type="text" class="text" name="domain" id="domain" autocomplete="true" autocapitalize="off">
+      <div class="container">
+        <form id="generator-form">
+            <div class="form">
+              <div class="sub">
+                <label for="domain">Domain name <span>e.g. &ldquo;twitter.com&rdquo;</span></label>
+                <input type="text" class="text" name="domain" id="domain" autocomplete="true" autocapitalize="off">
 
-            <label for="service">Service name <span>e.g. &ldquo;twitter&rdquo;</span></label>
-            <input type="text" class="text" name="service" id="service" autocomplete="true" autocapitalize="off">
+                <label for="service">Service name <span>e.g. &ldquo;twitter&rdquo;</span></label>
+                <input type="text" class="text" name="service" id="service" autocomplete="true" autocapitalize="off">
 
-            <div class="password">
-              <label for="passphrase">Passphrase <span>e.g. &ldquo;best pass ever.&rdquo;</span></label>
-              <input type="password" class="password" name="passphrase" id="passphrase" autocomplete="off" autocapitalize="off">
-              <span class="show">
-                <label for="show-passphrase">Show</label>
-                <input type="checkbox" name="show-passphrase" id="show-passphrase">
-              </span>
+                <div class="password">
+                  <label for="passphrase">Passphrase <span>e.g. &ldquo;best pass ever.&rdquo;</span></label>
+                  <input type="password" class="password" name="passphrase" id="passphrase" autocomplete="off" autocapitalize="off">
+                  <span class="show">
+                    <label for="show-passphrase">Show</label>
+                    <input type="checkbox" name="show-passphrase" id="show-passphrase">
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="generator">
-            <div class="sub">
-                <label for="word">Generated password</label>
-                <input type="text" class="text" id="word" autocomplete="off" autocapitalize="off" readonly="readonly">
+            <div class="generator">
+                <div class="sub">
+                    <label for="word">Generated password</label>
+                    <input type="text" class="text" id="word" autocomplete="off" autocapitalize="off" readonly="readonly">
+                </div>
+                <div class="sub">
+                    <a id="reset-form">Reset</a>
+                </div>
             </div>
-            <div class="sub">
-                <button id="reset-form">Reset</button>
-            </div>
-        </div>
 
-      </form>
+          </form>
+      </div>
 
       <script src="./js/crypto-js.js"></script>
       <script src="./js/core.js"></script>
