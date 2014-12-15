@@ -1,11 +1,3 @@
-body, input {
-  background: #fff;
-  color: #666;
-  font: 18px/1.5 FreeSans, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .sub {
   margin: 0 auto;
   padding: 0 1em 1.2em;
@@ -38,6 +30,10 @@ label span {
   color: #999;
 }
 
+input {
+    max-width: 300px;
+}
+
 input.text, input.password {
   border: none;
   border-bottom: 1px solid #666;
@@ -62,20 +58,27 @@ input.text, input.password {
   display: inline;
 }
 
+.generator {
+    margin: 1rem auto !important;
+}
+
 .generator input {
   font-family: Monaco, Courier New, monospace;
 }
 
 #reset-form {
+    position: relative;
+    display: inline;
     padding: 1em;
-    width: 30%;
     font-weight: bold;
     margin: .6em 0;
     float: left;
-}y
+    width: 30%;
+}
 
 @media (max-width: 800px) {
-  body { font-size: 14px; }
+  .container {width: 100%; box-shadow: none; border: 0; min-width: 0}
   .sub { margin: none; width: auto; }
+  .generator {width: auto;}
 }
 

@@ -1,27 +1,3 @@
-body, input {
-  background: #ffffff;
-  color: #666666;
-  font: 18px/1.5 FreeSans, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.topbar {
-    position: relative;
-    margin: 0 0 2rem 0;
-    width: 100%;
-    height: 2rem;
-    background-color: #3399ff;
-}
-
-.container {
-    position: relative;
-    margin: 1rem auto;
-    box-shadow: 3px 3px 10px #888888;
-    min-width: 800px;
-    width: 50%;
-}
-
 .form {
     position: relative;
     height: auto;
@@ -173,10 +149,6 @@ table th:first-child, table td:first-child {
     text-align: center;
 }
 
-.break {
-    clear: both
-}
-
 #save-options, #cancel-options {
     position: relative;
     display: inline;
@@ -220,7 +192,6 @@ table th:first-child, table td:first-child {
 }
 
 @media (max-width: 800px) {
-    body { font-size: 14px; }
     .container {width: 100%; box-shadow: none; border: 0; min-width: 0}
     .generator {width: auto;}
     .sub {width: auto;}

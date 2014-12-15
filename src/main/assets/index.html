@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <title>Easy Password Handling</title>
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/vault.css">
   </head>
   <body>
-
       <div class="container">
         <form id="generator-form">
             <div class="form">
@@ -34,9 +34,11 @@
                     <label for="word">Generated password</label>
                     <input type="text" class="text" id="word" autocomplete="off" autocapitalize="off" readonly="readonly">
                 </div>
-                <div class="sub">
-                    <a id="reset-form">Reset</a>
-                </div>
+            </div>
+
+            <div class="generator">
+                <a href="#" id="reset-form">Reset</a>
+                <div class="break"></div>
             </div>
 
           </form>
