@@ -38,23 +38,25 @@ input.text, input.password {
   border: none;
   border-bottom: 1px solid #666;
   font-size: 1em;
-}
-
-.password input.text, .password input.password {
   display: inline;
   margin-right: 1em;
-  width: 80%;
+  width: 70%;
 }
 
-.password .show {
-  float: right;
+div.password {
+  max-width: 50%;
+  display: inline;
+}
+
+div.password .show {
+  display: inline;
   font-size: 0.6em;
   font-weight: bold;
   padding-top: 0.5em;
   text-transform: uppercase;
 }
 
-.password .show label {
+div.password .show label {
   display: inline;
 }
 
@@ -73,7 +75,7 @@ input.text, input.password {
     font-weight: bold;
     margin: .6em 0;
     float: left;
-    width: 30%;
+    width: 10%;
 }
 
 @media (max-width: 800px) {
