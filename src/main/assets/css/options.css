@@ -150,11 +150,6 @@ table th:first-child, table td:first-child {
 }
 
 #save-options, #cancel-options {
-    position: relative;
-    display: inline;
-    padding: 1em;
-    font-weight: bold;
-    margin: .6em 0;
     float: right;
 }
 

@@ -1,7 +1,7 @@
 .sub {
   margin: 0 auto;
   padding: 0 1em 1.2em;
-  width: 600px;
+  width: auto;
 }
 
 .form {
@@ -40,7 +40,7 @@ input.text, input.password {
   font-size: 1em;
   display: inline;
   margin-right: 1em;
-  width: 70%;
+  width: auto;
 }
 
 div.password {
@@ -69,18 +69,17 @@ div.password .show label {
 }
 
 #reset-form {
-    position: relative;
-    display: inline;
-    padding: 1em;
-    font-weight: bold;
-    margin: .6em 0;
     float: left;
-    width: 10%;
+
 }
 
 @media (max-width: 800px) {
-  .container {width: 100%; box-shadow: none; border: 0; min-width: 0}
-  .sub { margin: none; width: auto; }
-  .generator {width: auto;}
+  .container { width: 100%; box-shadow: none; border: 0; min-width: 0; margin: 0 auto; }
+  .form { border-top: 0; }
+  .sub { padding: 0 0.3em 0.7em; }
+  .sub input { width: auto; }
+  .generator { width: auto; }
+  .generator input { width: 100%; }
+  input.password { width: 200px; margin-right: 0; }
 }
 

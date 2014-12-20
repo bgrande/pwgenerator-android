@@ -1,9 +1,9 @@
 body, input {
-  background: #fff;
-  color: #666;
-  font: 18px/1.5 FreeSans, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    background: #fff;
+    color: #666;
+    font: 18px/1.5 FreeSans, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .topbar {
@@ -20,6 +20,15 @@ body, input {
     box-shadow: 3px 3px 10px #888888;
     min-width: 800px;
     width: 50%;
+}
+
+.button {
+    box-shadow: 2px 2px 5px #888888;
+    position: relative;
+    display: inline;
+    font-weight: bold;
+    padding: .6em;
+    margin: .6em 0;
 }
 
 .break {
