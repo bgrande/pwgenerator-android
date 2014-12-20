@@ -18,7 +18,7 @@ body, input {
     position: relative;
     margin: 1rem auto;
     box-shadow: 3px 3px 10px #888888;
-    min-width: 800px;
+    min-width: 400px;
     width: 50%;
 }
 
