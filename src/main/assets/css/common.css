@@ -19,7 +19,7 @@ body, input {
     margin: 1rem auto;
     box-shadow: 3px 3px 10px #888888;
     min-width: 400px;
-    width: 50%;
+    max-width: 600px;
 }
 
 .sub {
