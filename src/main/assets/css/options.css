@@ -1,12 +1,10 @@
+.container {
+    min-width: 600px;
+}
+
 .form {
     position: relative;
     height: auto;
-}
-
-.sub {
-    margin: 0 auto;
-    padding: 0 1em 1.5em;
-    width: 600px;
 }
 
 .info .sub {
@@ -75,8 +73,7 @@ input.text, input.password {
 }
 
 .generator {
-    width: 600px;
-    margin: 1rem auto;
+    padding: .5em;
 }
 
 .generator input {
@@ -186,7 +183,7 @@ table th:first-child, table td:first-child {
     opacity: 0.8;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .container {width: 100%; box-shadow: none; border: 0; min-width: 0}
     .generator {width: auto;}
     .sub {width: auto;}
