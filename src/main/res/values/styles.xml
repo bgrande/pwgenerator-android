@@ -1,8 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/AppThemeActionBar</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <!-- ActionBar tabs styles -->
+    <style name="AppThemeActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- action bar background -->
+        <item name="android:background">#3399ff</item>
+        <item name="android:windowContentOverlay">@layout/abc_action_bar_decor</item>
     </style>
 
 </resources>
