@@ -8,6 +8,10 @@
 
     $('servicename').disabled = 'disabled';
     $('autosend').disabled = 'disabled';
+
+    if (!defServicename.value) {
+        defServicename.value = Helper.getRandomServicename();
+    }
 })();
 
 
