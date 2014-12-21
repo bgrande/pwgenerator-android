@@ -68,7 +68,7 @@ div.password .show label {
   .form { border-top: 0; }
   .sub { padding: 0 0.3em 0.7em; }
   .sub input { width: auto; }
-  .generator { width: auto; }
+  .generator { width: auto; margin-top: 0 }
   .generator input { width: 100%; }
   input.password { width: 200px; margin-right: 0; }
 }
